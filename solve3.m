@@ -1,0 +1,11 @@
+N=2:10:362;
+b=2.*pi.*(N-1)./365.2422;
+delta=asin(0.39795*cos(0.98563.*(N-173).*pi./180));
+fai=(39+54/60+26/3600)*pi/180;
+t=12;
+tl=t-8+(116+23/60+29/3600)/15;
+td=(tl-12).*pi./12;
+h=asin(sin(fai)*sin(delta)+cos(fai)*cos(delta)*cos(td));
+L=3;
+d=L./tan(h);
+plot(N,d)
